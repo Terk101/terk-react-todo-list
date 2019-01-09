@@ -6,13 +6,10 @@ class Todos extends Component {
         super(props);
 
     }
-    onMarkComplete = (id) => {
-        console.log(id);
-    }
-    
+
     render() {
         return this.props.todos.map((todo) => (
-            <TodoItems key={todo.id} data={todo} onMarkCompleted={this.onMarkComplete} />
+            <TodoItems key={todo.id} data={todo} onMarkCompleted={this.props.onMarkComplete} />
         ));
 
     }
