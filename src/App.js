@@ -20,10 +20,17 @@ class App extends Component {
   });
   }
 
+  xx = (id) => {
+    this.setState({todos : this.state.todos.filter((todo) => {
+      return todo.id != id;
+    })
+  });
+  }
+
   render() {
     return (
       <div className="App">
-        <Todos  todos = {this.state.todos} onMarkComplete = {this.onMarkComplete} />
+        <Todos  todos = {this.state.todos} onMarkComplete = {this.onMarkComplete} onClickDel = {this.xx} />
       </div>
     );
   }
