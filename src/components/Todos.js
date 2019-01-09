@@ -6,12 +6,16 @@ class Todos extends Component {
         super(props);
 
     }
-  render() {
-      return this.props.todos.map((todo) => (
-          <TodoItems key = {todo.id} data = {todo} onMarkCompleted = {this.props.onMarkComplete}/> 
-      ));
-   
-}
+    onMarkComplete = (id) => {
+        console.log(id);
+    }
+    
+    render() {
+        return this.props.todos.map((todo) => (
+            <TodoItems key={todo.id} data={todo} onMarkCompleted={this.onMarkComplete} />
+        ));
+
+    }
 }
 
 export default Todos;
