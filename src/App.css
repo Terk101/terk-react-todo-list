@@ -7,6 +7,7 @@
   height: 40vmin;
 }
 
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -20,6 +21,23 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.container {
+  padding:  0 1rem;
+}
+
+.btn{
+  display:  inline-block;
+   border: nont;
+   background: #555;
+   color: #fff;
+   padding: 7px 20px;
+   cursor: pointer;
+}
+
+.btn:hover{
+  background: #666;
 }
 
 @keyframes App-logo-spin {
